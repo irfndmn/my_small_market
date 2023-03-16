@@ -24,9 +24,9 @@ public class Sarkuteri extends ShopService {
     }
 
     @Override
-    public void fiyatHesapla(int UrunKodu, double miktar,Kasa k,DataBase a) {
+    public void fiyatHesapla(int UrunKodu, double miktar,DataBase a) {
 
-        k.sarkuteriToplam+=(miktar*a.fiyatSarkuteri[UrunKodu-1]);
+        Kasa.sarkuteriToplam+=(miktar*a.fiyatSarkuteri[UrunKodu-1]);
 
 
     }

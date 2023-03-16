@@ -4,8 +4,8 @@ public class Market extends ShopService{
 
 
     @Override
-    public void fiyatHesapla(int UrunKodu, double miktar, Kasa k, DataBase a) {
+    public void fiyatHesapla(int UrunKodu, double miktar,DataBase a) {
 
-        k.marketToplam+=(miktar*a.fiyatMarket[UrunKodu-1]);
+        Kasa.marketToplam+=(miktar*a.fiyatMarket[UrunKodu-1]);
     }
 }

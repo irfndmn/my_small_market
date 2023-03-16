@@ -23,7 +23,7 @@ public abstract class ShopService {
 
     }
 
-    public abstract void fiyatHesapla(int UrunKodu,double miktar,Kasa k,DataBase a);
+    public abstract void fiyatHesapla(int UrunKodu,double miktar,DataBase a);
 
 
 

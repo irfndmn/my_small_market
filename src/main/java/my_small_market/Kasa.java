@@ -6,14 +6,14 @@ import java.time.format.DateTimeFormatter;
 public class Kasa {
     static double  manavToplam=0.00;
 
-    static double sarkuteriToplam=0.00;
+    static  double sarkuteriToplam=0.00;
 
-   static double marketToplam=0.00;
+    static double marketToplam=0.00;
 
     private int fisNo=1000;
     private String fisZamani;
 
-    private static double odenecekToplamBorc;
+     static double odenecekToplamBorc;
 
     public double musterininOdedigi;
 
@@ -21,12 +21,22 @@ public class Kasa {
 
 
     public Kasa(){
-        this.odenecekToplamBorc=(this.manavToplam+this.sarkuteriToplam+this.marketToplam);
+        setToplam();
+
     }
 
+
+    public void setToplam(){
+        odenecekToplamBorc=(manavToplam+ sarkuteriToplam+marketToplam);
+    }
+
+
+
+
     public Kasa(double musterininOdedigi) {
+
         this.musterininOdedigi = musterininOdedigi;
-        this.paraUstu=(this.musterininOdedigi-this.odenecekToplamBorc);
+        this.paraUstu=(this.musterininOdedigi-odenecekToplamBorc);
         setFisZamaniandFisNo();
         fisiYazdir();
     }
@@ -64,6 +74,16 @@ public class Kasa {
         System.out.println();
         System.out.println("=================================================================\n");
         System.out.println("Bizi Tercih Ettiginiz Icin Tesekkur Ederiz... Tekrar Bekleriz...\n\n");
+
+
+
+        /// En son fisi yazdirinca tekrar basa gelmek icin sepeti bosaltmak gerekiyor o yuzden sonradan ekledim bu kismi
+
+        Sepet.mysepet.clear();                /// Sepeti nosaltmis oluyoz her fis yazildiginda
+        odenecekToplamBorc=0.0;
+        manavToplam=0.0;
+        marketToplam=0.0;
+        sarkuteriToplam=0.0;
 
 
 

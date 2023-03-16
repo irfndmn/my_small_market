@@ -23,8 +23,8 @@ public class Manav extends ShopService{
     }
 
     @Override
-    public void fiyatHesapla(int UrunKodu, double miktar, Kasa k, DataBase a) {
+    public void fiyatHesapla(int UrunKodu, double miktar, DataBase a) {
 
-        k.manavToplam+=(miktar*a.fiyatManav[UrunKodu-1]);
+        Kasa.manavToplam+=(miktar*a.fiyatManav[UrunKodu-1]);  /// k.manavToplam+=(miktar*a.fiyatManav[UrunKodu-1]);
     }
 }
